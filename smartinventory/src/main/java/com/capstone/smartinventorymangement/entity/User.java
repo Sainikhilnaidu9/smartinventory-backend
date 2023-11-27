@@ -3,6 +3,14 @@ package com.capstone.smartinventorymangement.entity;
 public class User {
 	private Integer userId;
 	private String userName;
+	private Integer mobNo;
+	
+	public Integer getMobNo() {
+		return mobNo;
+	}
+	public void setMobNo(Integer mobNo) {
+		this.mobNo = mobNo;
+	}
 	public Integer getUserId() {
 		return userId;
 	}
