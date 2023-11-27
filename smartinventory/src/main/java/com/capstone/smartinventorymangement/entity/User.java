@@ -4,6 +4,7 @@ public class User {
 	private Integer userId;
 	private String userName;
 	private Integer mobNo;
+	private String name;
 	
 	public Integer getMobNo() {
 		return mobNo;
@@ -11,6 +12,7 @@ public class User {
 	public void setMobNo(Integer mobNo) {
 		this.mobNo = mobNo;
 	}
+	
 	public Integer getUserId() {
 		return userId;
 	}
