@@ -5,6 +5,7 @@ public class User {
 	private String userName;
 	private Integer mobNo;
 	private String name;
+	private Integer number;
 	
 	public Integer getMobNo() {
 		return mobNo;
