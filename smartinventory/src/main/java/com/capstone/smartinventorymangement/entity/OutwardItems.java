@@ -35,6 +35,10 @@ public class OutwardItems implements Serializable {
     @Column(name = "quantity", nullable = false)
     private double quantity;
 
+    
+    //purpose is boolean bcoz as per doc, there are only two options.
+    // 1=sale
+    // 0 = service
     @Column(name = "purpose", nullable = false)
     private boolean purpose;
 
