@@ -13,9 +13,9 @@ public class Return implements Serializable {
     @Column(name = "return_id", nullable = false, unique = true, length = 3)
     private int returnId;
 
-   // @ManyToOne
-   // @JoinColumn(name = "godown_id", nullable = false)
-    // we have to map it with godown id, so that we can access details of godown
+    @ManyToOne
+    @JoinColumn(name = "godown_id", nullable = false)
+//     we have to map it with godown id, so that we can access details of godown
     private Godown returnGodownId;
 
     @Column(name = "item_name", nullable = false)
