@@ -14,6 +14,8 @@ public class InwardItems implements Serializable {
     private String id;
 
   // we have to do many to one mapping here with Godown entity.
+    @ManyToOne
+    @JoinColumn(name = "godown_id")
     private Godown godown;
 
     @Column(name = "name_of_supplier", nullable = false)

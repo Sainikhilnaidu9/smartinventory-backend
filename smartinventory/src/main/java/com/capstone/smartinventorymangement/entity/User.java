@@ -3,17 +3,8 @@ package com.capstone.smartinventorymangement.entity;
 public class User {
 	private Integer userId;
 	private String userName;
-	private Integer mobNo;
-	private String name;
-	private Integer number;
-	
-	public Integer getMobNo() {
-		return mobNo;
-	}
-	public void setMobNo(Integer mobNo) {
-		this.mobNo = mobNo;
-	}
-	
+	private String userPassword;
+	private String userRole;
 	public Integer getUserId() {
 		return userId;
 	}
@@ -26,10 +17,26 @@ public class User {
 	public void setUserName(String userName) {
 		this.userName = userName;
 	}
+	public String getUserPassword() {
+		return userPassword;
+	}
+	public void setUserPassword(String userPassword) {
+		this.userPassword = userPassword;
+	}
+	public String getUserRole() {
+		return userRole;
+	}
+	public void setUserRole(String userRole) {
+		this.userRole = userRole;
+	}
 	@Override
 	public String toString() {
-		return "User [userId=" + userId + ", userName=" + userName + ", mobNo=" + mobNo + ", name=" + name + ", number="
-				+ number + "]";
+		return "User [userId=" + userId + ", userName=" + userName + ", userPassword=" + userPassword + ", userRole="
+				+ userRole + "]";
 	}
+	
+	
+	
+
 	
 }

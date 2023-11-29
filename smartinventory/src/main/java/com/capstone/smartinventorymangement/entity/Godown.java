@@ -20,6 +20,7 @@ public class Godown implements Serializable {
     private String location;
 
     @Column(name = "start_date", nullable = false)
+    @Temporal(TemporalType.DATE)
     private LocalDate startDate;
     
     private Employee manager;
