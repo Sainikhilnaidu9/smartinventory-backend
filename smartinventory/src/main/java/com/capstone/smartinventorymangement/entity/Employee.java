@@ -1,24 +1,31 @@
 package com.capstone.smartinventorymangement.entity;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
 public class Employee {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private int employeeId;
+	private static final AtomicInteger counter = new AtomicInteger(100);
+	@Id
+	private String employeeId;
     private String employeeName;
-    private String position;
-    private String department;
-	public int getEmployeeId() {
+    private String role;
+    private String password;
+
+    
+    public Employee(String employeeName){
+    	this.employeeName = employeeName;
+    	this.employeeId = generateEmployeeId();
+    }
+    public String generateEmployeeId() {
+    	return "INCUSR" + counter.incrementAndGet();
+    }
+    
+	public String getEmployeeId() {
 		return employeeId;
-	}
-	public void setEmployeeId(int employeeId) {
-		this.employeeId = employeeId;
 	}
 	public String getEmployeeName() {
 		return employeeName;
@@ -26,22 +33,17 @@ public class Employee {
 	public void setEmployeeName(String employeeName) {
 		this.employeeName = employeeName;
 	}
-	public String getPosition() {
-		return position;
+	public String getRole() {
+		return role;
 	}
-	public void setPosition(String position) {
-		this.position = position;
-	}
-	public String getDepartment() {
-		return department;
-	}
-	public void setDepartment(String department) {
-		this.department = department;
+	public void setRole(String role) {
+		this.role = role;
 	}
 	@Override
 	public String toString() {
-		return "Employee [employeeId=" + employeeId + ", employeeName=" + employeeName + ", position=" + position
-				+ ", department=" + department + "]";
+		return "Employee [employeeId=" + employeeId + ", employeeName=" + employeeName + ", role=" + role
+				+ ", password=" + password + "]";
 	}
+
     
 }
