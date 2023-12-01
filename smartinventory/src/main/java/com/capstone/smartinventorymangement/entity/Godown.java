@@ -6,8 +6,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 @Entity
 @Table(name = "godown")
-public class Godown {
-	private static final AtomicInteger counter = new AtomicInteger(100);
+public class Godown extends BaseAuditEntity {
+	private final AtomicInteger counter = new AtomicInteger(100);
     @Id
     private String godownId;
     

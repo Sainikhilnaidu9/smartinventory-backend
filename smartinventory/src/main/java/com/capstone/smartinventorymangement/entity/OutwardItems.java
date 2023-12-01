@@ -1,12 +1,11 @@
 package com.capstone.smartinventorymangement.entity;
 
 import javax.persistence.*;
-import java.io.Serializable;
 import java.time.LocalDate;
 
 @Entity
 @Table(name = "outward_items")
-public class OutwardItems implements Serializable {
+public class OutwardItems extends BaseAuditEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

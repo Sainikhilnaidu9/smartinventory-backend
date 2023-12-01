@@ -6,9 +6,9 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
-public class Employee {
+public class Employee extends BaseAuditEntity {
 
-	private static final AtomicInteger counter = new AtomicInteger(100);
+	private final AtomicInteger counter = new AtomicInteger(100);
 	@Id
 	private String employeeId;
     private String employeeName;

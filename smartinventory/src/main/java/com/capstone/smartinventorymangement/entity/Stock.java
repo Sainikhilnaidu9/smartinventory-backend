@@ -1,11 +1,10 @@
 package com.capstone.smartinventorymangement.entity;
 
 import javax.persistence.*;
-import java.io.Serializable;
 
 @Entity
 @Table(name = "stocks")
-public class Stock implements Serializable {
+public class Stock extends BaseAuditEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -20,6 +19,7 @@ public class Stock implements Serializable {
 
     @Column(name = "item_quantity", nullable = false)
     private int itemQuantity;
+    
 
 	public int getItemId() {
 		return itemId;
