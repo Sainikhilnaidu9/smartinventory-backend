@@ -1,4 +1,4 @@
-package com.capstone.smartinventorymangement.entity;
+package com.capstone.smartinventorymanagement.entity;
 
 import javax.persistence.*;
 import java.time.LocalDate;

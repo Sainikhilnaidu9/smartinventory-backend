@@ -1,7 +1,9 @@
-package com.capstone.smartinventorymangement.entity;
+package com.capstone.smartinventorymanagement.entity;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
 @Entity
@@ -23,6 +25,9 @@ public class Godown extends BaseAuditEntity {
     @OneToOne(optional = false)
     @JoinColumn(name = "employee_id", unique = true)
     private Employee manager;
+    
+    @OneToMany(cascade= CascadeType.ALL)
+    private List<Stock>items= new ArrayList<Stock>();
     
     public Godown() {
     	this.godownId = generateGodownId();
