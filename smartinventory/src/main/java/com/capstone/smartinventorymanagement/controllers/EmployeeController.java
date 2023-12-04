@@ -19,6 +19,7 @@ public class EmployeeController {
 	
 	@GetMapping("/employees")
 	public List<EmployeeDto> findAll(){
+		Employee emp = new Employee();
 		List<Employee>employeeList = employeeRepository.findAll();
 		List<EmployeeDto>employeeDtoList = new ArrayList<>();
 		for (Employee employee : employeeList)
@@ -26,6 +27,7 @@ public class EmployeeController {
 			EmployeeDto employeeDto = EmployeeMapper.convertToDto(employee);
 			employeeDtoList.add(employeeDto);
 		}
+		
 		return employeeDtoList;
 	}
 
