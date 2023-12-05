@@ -2,20 +2,26 @@ package com.capstone.smartinventorymanagement.entity;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-import lombok.Data;
+import jakarta.persistence.Table;
+
 
 @Entity
-@Data
+@Table
 public class Employee extends BaseAuditEntity {
 
 	private final AtomicInteger counter = new AtomicInteger(100);
 	@Id
+	@Column
 	private String employeeId;
+	@Column
     private String employeeName;
+	@Column
     private String role;
+	@Column
     private String password;
 
     

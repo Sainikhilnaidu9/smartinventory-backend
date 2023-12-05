@@ -13,7 +13,7 @@ import com.capstone.smartinventorymanagement.repositories.InwardItemRepository;
 
 @Service
 public class InwardItemServices {
-	@Autowired
+//	@Autowired
 	InwardItemRepository inwardItemRepository;
 
 	public List<InwardItemDto> findAllInwardItems() {
