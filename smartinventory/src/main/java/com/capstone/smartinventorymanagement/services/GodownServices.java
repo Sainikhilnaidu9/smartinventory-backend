@@ -43,7 +43,7 @@ public class GodownServices {
             return GodownMapper.convertToDto(op.get());
         } else {
             
-            throw new GodownIdNotFoundException("No Record found for Godown with id: " + id);
+            throw new GodownIdNotFoundException("No Record is found for Godown with id: " + id);
         }
     }
 
