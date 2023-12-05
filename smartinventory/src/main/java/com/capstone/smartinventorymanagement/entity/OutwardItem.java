@@ -114,7 +114,7 @@ public class OutwardItem extends BaseAuditEntity {
 		this.quantity = quantity;
 	}
 
-	public boolean isPurpose() {
+	public boolean getPurpose() {
 		return purpose;
 	}
 
