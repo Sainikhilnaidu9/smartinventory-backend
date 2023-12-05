@@ -5,7 +5,7 @@ import java.time.LocalDate;
 
 @Entity
 @Table(name = "outward_items")
-public class OutwardItems extends BaseAuditEntity {
+public class OutwardItem extends BaseAuditEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -114,7 +114,7 @@ public class OutwardItems extends BaseAuditEntity {
 		this.quantity = quantity;
 	}
 
-	public boolean isPurpose() {
+	public boolean getPurpose() {
 		return purpose;
 	}
 
