@@ -11,24 +11,18 @@ import com.capstone.smartinventorymanagement.dtos.ReportDto;
 import com.capstone.smartinventorymanagement.entity.Report;
 import com.capstone.smartinventorymanagement.mappers.ReportMapper;
 import com.capstone.smartinventorymanagement.repositories.ReportRepository;
+import com.capstone.smartinventorymanagement.services.ReportService;
 
 @RestController
 public class ReportController {
 	@Autowired
-	ReportRepository reportRepository;
+	ReportService reportService;
 	
 	@GetMapping("/reports")
 	public List<ReportDto> findAll(){
-		Report rep = new Report();
-		List<Report>reportList = reportRepository.findAll();
-		List<ReportDto>reportDtoList = new ArrayList<>();
-		for (Report report : reportList)
-		{
-			ReportDto reportDto = ReportMapper.convertToDto(report);
-			reportDtoList.add(reportDto);
-		}
 		
-		return reportDtoList;
+		
+		return reportService.fetchAllReports();
 	}
 
 	
