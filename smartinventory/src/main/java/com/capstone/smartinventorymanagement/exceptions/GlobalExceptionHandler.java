@@ -21,5 +21,19 @@ public class GlobalExceptionHandler {
 		ResponseEntity<String> re=new ResponseEntity<>(ee.getMessage(),HttpStatus.NOT_FOUND);
 		return re;
 	}
+	
+	@ExceptionHandler(InwardItemIdNotFoundException.class)
+	public ResponseEntity<String> handlingException(InwardItemIdNotFoundException ee)
+	{
+		ResponseEntity<String> re=new ResponseEntity<>(ee.getMessage(),HttpStatus.NOT_FOUND);
+		return re;
+	}
+	
+	@ExceptionHandler(OutwardItemIdNotFoundException.class)
+	public ResponseEntity<String> handlingException(OutwardItemIdNotFoundException ee)
+	{
+		ResponseEntity<String> re=new ResponseEntity<>(ee.getMessage(),HttpStatus.NOT_FOUND);
+		return re;
+	}
 
 }
