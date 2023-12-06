@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.capstone.smartinventorymanagement.dtos.OutwardItemDto;
-import com.capstone.smartinventorymanagement.entity.InwardItem;
 import com.capstone.smartinventorymanagement.entity.OutwardItem;
 import com.capstone.smartinventorymanagement.services.OutwardItemServices;
 

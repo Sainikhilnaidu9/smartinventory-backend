@@ -35,5 +35,12 @@ public class GlobalExceptionHandler {
 		ResponseEntity<String> re=new ResponseEntity<>(ee.getMessage(),HttpStatus.NOT_FOUND);
 		return re;
 	}
+	@ExceptionHandler(EmployeeIdNotFoundException.class)
+	public ResponseEntity<String> handlingException(EmployeeIdNotFoundException ee)
+	{
+		ResponseEntity<String> re=new ResponseEntity<>(ee.getMessage(),HttpStatus.NOT_FOUND);
+		return re;
+	}
+	
 
 }
