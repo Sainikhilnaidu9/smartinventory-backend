@@ -24,6 +24,27 @@ public class ReturnService {
 		}
 		return returnDtoList;
 	}
+
+	public ReturnDto findReturnItemsById(String id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public String insertReturn(Return returns) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public String updateReturn(Return returns, String id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public String deleteReturn(String id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
 	
 	
 
