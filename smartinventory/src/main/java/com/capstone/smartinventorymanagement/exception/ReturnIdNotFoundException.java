@@ -1,4 +1,4 @@
-package com.capstone.smartinventorymanagement.exceptions;
+package com.capstone.smartinventorymanagement.exception;
 
 public class ReturnIdNotFoundException extends RuntimeException {
 	public ReturnIdNotFoundException(String message) {

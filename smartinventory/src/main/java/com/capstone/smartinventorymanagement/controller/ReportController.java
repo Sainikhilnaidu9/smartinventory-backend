@@ -11,14 +11,10 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-<<<<<<< HEAD:smartinventory/src/main/java/com/capstone/smartinventorymanagement/controller/ReportController.java
+
 import com.capstone.smartinventorymanagement.dto.ReportDto;
+import com.capstone.smartinventorymanagement.model.Report;
 import com.capstone.smartinventorymanagement.service.ReportService;
-=======
-import com.capstone.smartinventorymanagement.dtos.ReportDto;
-import com.capstone.smartinventorymanagement.entity.Report;
-import com.capstone.smartinventorymanagement.services.ReportService;
->>>>>>> 26102eab6d8bf404f45b644404fc2bd8e15523a9:smartinventory/src/main/java/com/capstone/smartinventorymanagement/controllers/ReportController.java
 
 @RestController
 public class ReportController {

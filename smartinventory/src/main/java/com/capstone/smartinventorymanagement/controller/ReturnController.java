@@ -10,15 +10,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-
-<<<<<<< HEAD:smartinventory/src/main/java/com/capstone/smartinventorymanagement/controller/ReturnController.java
 import com.capstone.smartinventorymanagement.dto.ReturnDto;
+import com.capstone.smartinventorymanagement.model.Return;
 import com.capstone.smartinventorymanagement.service.ReturnService;
-=======
-import com.capstone.smartinventorymanagement.dtos.ReturnDto;
-import com.capstone.smartinventorymanagement.entity.Return;
-import com.capstone.smartinventorymanagement.services.ReturnService;
->>>>>>> 26102eab6d8bf404f45b644404fc2bd8e15523a9:smartinventory/src/main/java/com/capstone/smartinventorymanagement/controllers/ReturnController.java
+
 
 @RestController
 public class ReturnController {

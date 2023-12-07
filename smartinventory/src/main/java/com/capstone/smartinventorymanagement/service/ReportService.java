@@ -6,22 +6,12 @@ import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
-<<<<<<< HEAD:smartinventory/src/main/java/com/capstone/smartinventorymanagement/service/ReportService.java
 import com.capstone.smartinventorymanagement.dto.ReportDto;
+import com.capstone.smartinventorymanagement.exception.ReportNotFoundException;
 import com.capstone.smartinventorymanagement.mapper.ReportMapper;
 import com.capstone.smartinventorymanagement.model.Report;
 import com.capstone.smartinventorymanagement.repository.ReportRepository;
-=======
-import com.capstone.smartinventorymanagement.dtos.ReportDto;
-import com.capstone.smartinventorymanagement.dtos.ReturnDto;
-import com.capstone.smartinventorymanagement.entity.Report;
-import com.capstone.smartinventorymanagement.entity.Return;
-import com.capstone.smartinventorymanagement.exceptions.ReportNotFoundException;
-import com.capstone.smartinventorymanagement.exceptions.ReturnIdNotFoundException;
-import com.capstone.smartinventorymanagement.mappers.ReportMapper;
-import com.capstone.smartinventorymanagement.mappers.ReturnMapper;
-import com.capstone.smartinventorymanagement.repositories.ReportRepository;
->>>>>>> 26102eab6d8bf404f45b644404fc2bd8e15523a9:smartinventory/src/main/java/com/capstone/smartinventorymanagement/services/ReportService.java
+
 
 @Service
 public class ReportService {

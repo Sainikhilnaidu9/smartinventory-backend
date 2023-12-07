@@ -6,18 +6,12 @@ import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
-<<<<<<< HEAD:smartinventory/src/main/java/com/capstone/smartinventorymanagement/service/ReturnService.java
 import com.capstone.smartinventorymanagement.dto.ReturnDto;
+import com.capstone.smartinventorymanagement.exception.ReturnIdNotFoundException;
 import com.capstone.smartinventorymanagement.mapper.ReturnMapper;
 import com.capstone.smartinventorymanagement.model.Return;
 import com.capstone.smartinventorymanagement.repository.ReturnRepository;
-=======
-import com.capstone.smartinventorymanagement.dtos.ReturnDto;
-import com.capstone.smartinventorymanagement.entity.Return;
-import com.capstone.smartinventorymanagement.exceptions.ReturnIdNotFoundException;
-import com.capstone.smartinventorymanagement.mappers.ReturnMapper;
-import com.capstone.smartinventorymanagement.repositories.ReturnRepository;
->>>>>>> 26102eab6d8bf404f45b644404fc2bd8e15523a9:smartinventory/src/main/java/com/capstone/smartinventorymanagement/services/ReturnService.java
+
 
 @Service
 public class ReturnService {
