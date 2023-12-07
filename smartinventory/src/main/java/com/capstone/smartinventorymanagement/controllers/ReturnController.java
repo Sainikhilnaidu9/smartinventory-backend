@@ -11,9 +11,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.capstone.smartinventorymanagement.dtos.InwardItemDto;
 import com.capstone.smartinventorymanagement.dtos.ReturnDto;
-import com.capstone.smartinventorymanagement.entity.InwardItem;
 import com.capstone.smartinventorymanagement.entity.Return;
 import com.capstone.smartinventorymanagement.services.ReturnService;
 
@@ -27,24 +25,24 @@ public class ReturnController {
 		return returnService.fetchAllReturns();
 	}
 	
-	@GetMapping("/return/{id}")
-	public ReturnDto getReturnItemById(@PathVariable("id") String id) {
+	@GetMapping("/returns/{id}")
+	public ReturnDto getReturnItemById(@PathVariable("id") Integer id) {
 		return ((ReturnService) returnService).findReturnItemsById(id);
 		
 	}
 	
-	@PostMapping("/returnItems")
+	@PostMapping("/returns")
 	public String postReturns(@RequestBody Return returns) {
 		return ((ReturnService) returnService).insertReturn(returns);
 	}
 	
-	@PutMapping("/return/{id}")
-	public String putReturn(@RequestBody Return returns,@PathVariable("id") String id) {
+	@PutMapping("/returns/{id}")
+	public String putReturn(@RequestBody Return returns,@PathVariable("id") Integer id) {
 		return returnService.updateReturn(returns,id);
 	}
 	
 	@DeleteMapping("/returns/{id}")
-	public String removeReturn(@PathVariable("id") String id) {
+	public String removeReturn(@PathVariable("id") Integer id) {
 		return returnService.deleteReturn(id);
 	}
 

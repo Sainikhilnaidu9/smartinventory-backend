@@ -10,7 +10,7 @@ public class Return extends BaseAuditEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "return_id", nullable = false, unique = true, length = 3)
-    private int returnId;
+    private Integer returnId;
 
     @ManyToOne
     @JoinColumn(name = "godown_id", nullable = false)
