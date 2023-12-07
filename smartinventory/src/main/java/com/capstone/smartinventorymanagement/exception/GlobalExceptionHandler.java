@@ -42,5 +42,18 @@ public class GlobalExceptionHandler {
 		return re;
 	}
 	
+	@ExceptionHandler(ReturnIdNotFoundException.class)
+	public ResponseEntity<String> handlingException(ReturnIdNotFoundException ee)
+	{
+		ResponseEntity<String> re=new ResponseEntity<>(ee.getMessage(),HttpStatus.NOT_FOUND);
+		return re;
+	}
+	
+	@ExceptionHandler(ReportNotFoundException.class)
+	public ResponseEntity<String> handlingException(ReportNotFoundException ee)
+	{
+		ResponseEntity<String> re=new ResponseEntity<>(ee.getMessage(),HttpStatus.NOT_FOUND);
+		return re;
+	}
 
 }
