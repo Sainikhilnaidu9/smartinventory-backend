@@ -19,7 +19,7 @@ import com.capstone.smartinventorymanagement.repositories.StockRepository;
 @Service
 public class StockServices {
 //
-//    @Autowired
+    //@Autowired
     private StockRepository stockRepository;
 
     public List<StockDto> getAllItems() {
