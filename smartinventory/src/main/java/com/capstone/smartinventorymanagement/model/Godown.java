@@ -22,9 +22,9 @@ public class Godown extends BaseAuditEntity {
     @Column(name = "start_date", nullable = false)
     @Temporal(TemporalType.DATE)
     private LocalDate startDate;
-//    @OneToOne(optional = false)
-//    @JoinColumn(name = "employee_id", unique = true)
-//    private Employee manager;
+    @OneToOne(optional = false)
+    @JoinColumn(name = "employee_id", unique = true)
+    private Employee manager;
     
     @OneToMany(cascade= CascadeType.ALL)
     private List<Stock>items= new ArrayList<Stock>();
