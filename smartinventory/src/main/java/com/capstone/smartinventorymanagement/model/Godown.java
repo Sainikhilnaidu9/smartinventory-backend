@@ -4,12 +4,12 @@ import jakarta.persistence.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.atomic.AtomicInteger;
 
 @Entity
 @Table(name = "godown")
 public class Godown extends BaseAuditEntity {
-	private final AtomicInteger counter = new AtomicInteger(100);
+
+
     @Id
     private String godownId;
     
@@ -33,8 +33,11 @@ public class Godown extends BaseAuditEntity {
     	this.godownId = generateGodownId();
     }
     public String generateGodownId() {
-    	return "GDWN" + counter.incrementAndGet();
+    	return "GDWN" + uniqueValue();
     }
+	private String uniqueValue() {
+		return Long.toString(System.currentTimeMillis());
+	}
 	public String getGodownId() {
 		return godownId;
 	}
@@ -59,16 +62,16 @@ public class Godown extends BaseAuditEntity {
 	public void setStartDate(LocalDate startDate) {
 		this.startDate = startDate;
 	}
-//	public Employee getManager() {
-//		return manager;
-//	}
-//	public void setManager(Employee manager) {
-//		this.manager = manager;
-//	}
+	public Employee getManager() {
+		return manager;
+	}
+	public void setManager(Employee manager) {
+		this.manager = manager;
+	}
 	@Override
 	public String toString() {
 		return "Godown [godownId=" + godownId + ", name=" + name + ", location=" + location + ", startDate=" + startDate
-				+ ", manager=" + /* manager + */"]";
+				+ ", manager=" +  manager + "]";
 	}
 	
 	

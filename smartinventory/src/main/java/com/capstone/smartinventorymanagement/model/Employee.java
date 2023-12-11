@@ -1,9 +1,10 @@
 package com.capstone.smartinventorymanagement.model;
 
-import java.util.concurrent.atomic.AtomicInteger;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
@@ -12,8 +13,6 @@ import jakarta.persistence.Table;
 @Entity
 @Table
 public class Employee extends BaseAuditEntity {
-
-	private final AtomicInteger counter = new AtomicInteger(100);
 	@Id
 	@Column
 	private String employeeId;
@@ -37,7 +36,12 @@ public class Employee extends BaseAuditEntity {
 	}
 
 	public String setEmployeeId() {
-		return "INCUSR" + counter.incrementAndGet();
+		return "INCUSR" + uniqueValue();
+	}
+
+	private String uniqueValue() {
+		
+		return Long.toString(System.currentTimeMillis());
 	}
 
 	public String getEmployeeId() {

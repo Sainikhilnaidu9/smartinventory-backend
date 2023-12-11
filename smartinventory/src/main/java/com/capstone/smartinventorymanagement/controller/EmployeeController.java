@@ -43,7 +43,6 @@ public class EmployeeController {
 	@PostMapping("/employee")
 	public ResponseEntity<String> createEmployee(@RequestBody Employee employee)
 	{
-		
 		String message =employeeService.createEmployee(employee);
 		ResponseEntity<String> re = new ResponseEntity<String>(message,HttpStatus.CREATED);
 		return re;
