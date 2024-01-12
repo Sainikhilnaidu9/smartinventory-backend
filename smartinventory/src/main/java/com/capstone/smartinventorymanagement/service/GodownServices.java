@@ -15,7 +15,7 @@ import com.capstone.smartinventorymanagement.repository.GodownRepository;
 @Service
 public class GodownServices {
 
-   // @Autowired
+   @Autowired
     private GodownRepository godownRepository;
 
     
