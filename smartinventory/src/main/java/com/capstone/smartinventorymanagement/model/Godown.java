@@ -16,7 +16,13 @@ public class Godown extends BaseAuditEntity {
     @Column(name = "name", nullable = false)
     private String name;
 
-    @Column(name = "location", nullable = false)
+    public List<Stock> getItems() {
+		return items;
+	}
+	public void setItems(List<Stock> items) {
+		this.items = items;
+	}
+	@Column(name = "location", nullable = false)
     private String location;
 
     @Column(name = "start_date", nullable = false)

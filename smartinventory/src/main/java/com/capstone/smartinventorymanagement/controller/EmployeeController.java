@@ -26,10 +26,6 @@ public class EmployeeController {
 	@Autowired
 	EmployeeService employeeService;
 	
-	@GetMapping
-	public List<EmployeeDto> findAlls(){
-		return employeeService.fetchAllEmployees();
-	}
 	
 	@GetMapping("/employee")
 	public List<EmployeeDto> findAll(){

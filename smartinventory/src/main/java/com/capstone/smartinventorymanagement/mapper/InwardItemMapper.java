@@ -14,6 +14,7 @@ public class InwardItemMapper {
 		inwardItemDto.setRecievedBy(inwardItem.getRecievedBy());
 		inwardItemDto.setBillCheckedBy(inwardItem.getBillCheckedBy());
 		inwardItemDto.setRecieptNo(inwardItem.getRecieptNo());
+		inwardItemDto.setQuantity(inwardItem.getQuantity());
 		return inwardItemDto;
 	}
 

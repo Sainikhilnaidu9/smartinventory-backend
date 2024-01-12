@@ -21,6 +21,10 @@ public class OutwardItem extends BaseAuditEntity {
 
     @Column(name = "invoice_number", nullable = false)
     private int invoiceNumber;
+    
+    @OneToOne
+    @JoinColumn(name ="item_id")
+    private Stock Item;
 
     @Column(name = "outward_date", nullable = false)
     private LocalDate outwardDate;

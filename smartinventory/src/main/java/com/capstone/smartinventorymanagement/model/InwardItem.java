@@ -22,11 +22,29 @@ public class InwardItem extends BaseAuditEntity {
 
     @Column(name = "date_of_supply", nullable = false)
     private LocalDate dateOfSupply;
-
+    
     @Column(name = "item_name", nullable = false)
     private String itemName;
+    @Column(name ="quantity")
+    private Integer quantity;
+    
+    public Integer getQuantity() {
+		return quantity;
+	}
 
-    @Column(name = "invoice_number", nullable = false)
+	public Godown getGodown() {
+		return godown;
+	}
+
+	public void setGodown(Godown godown) {
+		this.godown = godown;
+	}
+
+	public void setQuantity(Integer quantity) {
+		this.quantity = quantity;
+	}
+
+	@Column(name = "invoice_number", nullable = false)
     private double invoiceNumber;
 
     @Column(name = "recieved_by", nullable = false)
