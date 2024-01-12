@@ -44,16 +44,16 @@ public class InwardItem extends BaseAuditEntity {
 		this.quantity = quantity;
 	}
 
-	@Column(name = "invoice_number", nullable = false)
+	@Column(name = "invoice_number")
     private double invoiceNumber;
 
-    @Column(name = "recieved_by", nullable = false)
+    @Column(name = "recieved_by")
     private String recievedBy;
 
-    @Column(name = "bill_checked_by", nullable = false)
+    @Column(name = "bill_checked_by")
     private String billCheckedBy;
 
-    @Column(name = "reciept_no", nullable = false)
+    @Column(name = "reciept_no")
     private double recieptNo;
 
 	public String getId() {
