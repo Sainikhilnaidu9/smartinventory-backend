@@ -21,7 +21,7 @@ import com.capstone.smartinventorymanagement.repository.StockRepository;
 
 @Service
 public class InwardItemServices {
-//	@Autowired
+	@Autowired
 	InwardItemRepository inwardItemRepository;
 	StockRepository stockRepo;
 	GodownRepository godownRepo;

@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.capstone.smartinventorymanagement.dto.ReportDto;
@@ -15,6 +16,7 @@ import com.capstone.smartinventorymanagement.repository.ReportRepository;
 
 @Service
 public class ReportService {
+	@Autowired
 	ReportRepository reportRepository;
 
 	public List<ReportDto> fetchAllReports() {

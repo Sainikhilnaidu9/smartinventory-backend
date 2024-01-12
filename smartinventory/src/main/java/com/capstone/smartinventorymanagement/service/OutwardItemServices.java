@@ -18,7 +18,7 @@ import com.capstone.smartinventorymanagement.repository.OutwardItemRepository;
 
 @Service
 public class OutwardItemServices {
-//	@Autowired
+	@Autowired
 	OutwardItemRepository outwardItemRepository;
 
 	public List<OutwardItemDto> findAllOutwardItems() {
