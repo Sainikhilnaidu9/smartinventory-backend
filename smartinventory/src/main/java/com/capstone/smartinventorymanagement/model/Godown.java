@@ -13,7 +13,7 @@ public class Godown extends BaseAuditEntity {
     @Id
     private String godownId;
     
-    @Column(name = "name", nullable = false)
+    @Column(name = "name")
     private String name;
 
     public List<Stock> getItems() {
@@ -22,14 +22,15 @@ public class Godown extends BaseAuditEntity {
 	public void setItems(List<Stock> items) {
 		this.items = items;
 	}
-	@Column(name = "location", nullable = false)
+	@Column(name = "location")
     private String location;
 
-    @Column(name = "start_date", nullable = false)
+    @Column(name = "start_date")
     @Temporal(TemporalType.DATE)
     private LocalDate startDate;
-    @OneToOne(optional = false)
-    @JoinColumn(name = "employee_id", unique = true)
+    @OneToOne
+    (cascade = CascadeType.ALL)
+    @JoinColumn(name = "employee_id")
     private Employee manager;
     
     @OneToMany(cascade= CascadeType.ALL)

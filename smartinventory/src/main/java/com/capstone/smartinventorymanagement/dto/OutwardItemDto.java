@@ -17,7 +17,7 @@ public class OutwardItemDto {
     private LocalDate deliveryDate;
     private String deliverTo;
     private double quantity;
-    private boolean purpose;
+    private String purpose;
     private int recieptNo;
     private int billValue;
     private String billCheckedBy;
@@ -69,10 +69,10 @@ public class OutwardItemDto {
 	public void setQuantity(double quantity) {
 		this.quantity = quantity;
 	}
-	public boolean isPurpose() {
+	public String isPurpose() {
 		return purpose;
 	}
-	public void setPurpose(boolean purpose) {
+	public void setPurpose(String purpose) {
 		this.purpose = purpose;
 	}
 	public int getRecieptNo() {

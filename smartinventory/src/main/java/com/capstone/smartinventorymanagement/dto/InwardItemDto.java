@@ -2,14 +2,10 @@ package com.capstone.smartinventorymanagement.dto;
 
 import java.time.LocalDate;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-
 import com.capstone.smartinventorymanagement.model.Godown;
 
 public class InwardItemDto {
-	private String id;
+	private Integer id;
 	private Godown godown;
 	private String nameOfSupplier;
 	private LocalDate dateOfSupply;
@@ -19,10 +15,10 @@ public class InwardItemDto {
 	private String billCheckedBy;
 	private double recieptNo;
 	private Integer quantity;
-	public String getId() {
+	public Integer getId() {
 		return id;
 	}
-	public void setId(String id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 	public Integer getQuantity() {

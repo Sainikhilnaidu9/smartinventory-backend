@@ -62,5 +62,11 @@ public class GlobalExceptionHandler {
 		ResponseEntity<String> re=new ResponseEntity<>(ee.getMessage(),HttpStatus.NOT_FOUND);
 		return re;
 	}
+	@ExceptionHandler(UserEmailNotFoundException.class)
+	public ResponseEntity<String> handlingException(UserEmailNotFoundException ee)
+	{
+		ResponseEntity<String> re=new ResponseEntity<>(ee.getMessage(),HttpStatus.NOT_FOUND);
+		return re;
+	}
 
 }

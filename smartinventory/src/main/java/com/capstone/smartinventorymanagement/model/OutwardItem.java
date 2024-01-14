@@ -12,8 +12,8 @@ public class OutwardItem extends BaseAuditEntity {
     @Column(name = "id", nullable = false, unique = true, length = 3)
     private String id;
 
-    @ManyToOne
-    @JoinColumn(name = "godown_id", nullable = false)
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "godown_id")
     private Godown godown;
 
     @Column(name = "item_name", nullable = false)
@@ -43,7 +43,7 @@ public class OutwardItem extends BaseAuditEntity {
     // 1=sale
     // 0 = service
     @Column(name = "purpose", nullable = false)
-    private boolean purpose;
+    private String purpose;
 
     @Column(name = "reciept_no", nullable = false)
     private int recieptNo;
@@ -118,11 +118,11 @@ public class OutwardItem extends BaseAuditEntity {
 		this.quantity = quantity;
 	}
 
-	public boolean getPurpose() {
+	public String getPurpose() {
 		return purpose;
 	}
 
-	public void setPurpose(boolean purpose) {
+	public void setPurpose(String purpose) {
 		this.purpose = purpose;
 	}
 

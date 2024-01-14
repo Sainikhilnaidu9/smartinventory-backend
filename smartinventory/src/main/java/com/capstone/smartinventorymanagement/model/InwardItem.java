@@ -6,14 +6,13 @@ import java.time.LocalDate;
 @Entity
 @Table(name = "inward_items")
 public class InwardItem extends BaseAuditEntity {
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id", nullable = false, unique = true, length = 3)
-    private String id;
+    @Column(name = "id")
+    private Integer id;
 
   // we have to do many to one mapping here with Godown entity.
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "godown_id")
     private Godown godown;
 
@@ -56,11 +55,11 @@ public class InwardItem extends BaseAuditEntity {
     @Column(name = "reciept_no")
     private double recieptNo;
 
-	public String getId() {
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 

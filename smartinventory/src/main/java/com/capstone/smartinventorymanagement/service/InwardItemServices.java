@@ -23,7 +23,9 @@ import com.capstone.smartinventorymanagement.repository.StockRepository;
 public class InwardItemServices {
 	@Autowired
 	InwardItemRepository inwardItemRepository;
+	@Autowired
 	StockRepository stockRepo;
+	@Autowired
 	GodownRepository godownRepo;
 
 	public List<InwardItemDto> findAllInwardItems() {
