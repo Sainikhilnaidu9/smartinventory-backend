@@ -74,7 +74,7 @@ public class InwardItemServices {
 	        }
 	    }
 
-	public InwardItemDto findInwardItemById(Integer id) {
+	public InwardItemDto findInwardItemById(String id) {
 		Optional<InwardItem> op=inwardItemRepository.findById(id);
 		if(op.isPresent()) {
             return InwardItemMapper.convertToDto(op.get());
@@ -84,7 +84,7 @@ public class InwardItemServices {
         }
 	}
 
-	public String updateInwardItem(InwardItem inwardItem, Integer id) {
+	public String updateInwardItem(InwardItem inwardItem, String id) {
 		Optional<InwardItem> op=inwardItemRepository.findById(id);
 		if(op.isPresent()) {
 			InwardItem isSaved=inwardItemRepository.save(inwardItem);
@@ -101,7 +101,7 @@ public class InwardItemServices {
 		}
 	}
 
-	public String deleteInwardItem(Integer id) {
+	public String deleteInwardItem(String id) {
 		if(inwardItemRepository.existsById(id)) {
 			Optional<InwardItem> inward = inwardItemRepository.findById(id);
 			InwardItem item = inward.get();

@@ -26,7 +26,7 @@ public class InwardItemController {
 	}
 	
 	@GetMapping("/inwardItems/{id}")
-	public InwardItemDto getInwardItemById(@PathVariable("id") Integer id) {
+	public InwardItemDto getInwardItemById(@PathVariable("id") String id) {
 		return inwardItemServices.findInwardItemById(id);
 		
 	}
@@ -37,12 +37,12 @@ public class InwardItemController {
 	}
 	
 	@PutMapping("/inwardItems/{id}")
-	public String putInwardItem(@RequestBody InwardItem inwardItem,@PathVariable("id") Integer id) {
+	public String putInwardItem(@RequestBody InwardItem inwardItem,@PathVariable("id") String id) {
 		return inwardItemServices.updateInwardItem(inwardItem,id);
 	}
 	
 	@DeleteMapping("/inwardItems/{id}")
-	public String removeInwardItem(@PathVariable("id") Integer id) {
+	public String removeInwardItem(@PathVariable("id") String id) {
 		return inwardItemServices.deleteInwardItem(id);
 	}
 
