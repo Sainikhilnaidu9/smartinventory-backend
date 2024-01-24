@@ -7,10 +7,10 @@ import com.capstone.smartinventorymanagement.model.Stock;
 
 public class CartDto {
 	private int cartId;
-	
 	private List<Stock>listOfItems= new ArrayList<Stock>();
 	private int countOfItems;
 	private int totalPriceOfItems;
+	
 	public int getCartId() {
 		return cartId;
 	}
