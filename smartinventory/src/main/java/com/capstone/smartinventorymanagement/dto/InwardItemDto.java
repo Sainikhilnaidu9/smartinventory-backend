@@ -5,7 +5,7 @@ import java.time.LocalDate;
 import com.capstone.smartinventorymanagement.model.Godown;
 
 public class InwardItemDto {
-	private Integer id;
+	private String id;
 	private Godown godown;
 	private String nameOfSupplier;
 	private LocalDate dateOfSupply;
@@ -15,10 +15,11 @@ public class InwardItemDto {
 	private String billCheckedBy;
 	private double recieptNo;
 	private Integer quantity;
-	public Integer getId() {
+	
+	public String getId() {
 		return id;
 	}
-	public void setId(Integer id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 	public Integer getQuantity() {

@@ -9,9 +9,18 @@ public class InwardItem extends BaseAuditEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
-    private Integer id;
+    private String id;
+    
 
-  // we have to do many to one mapping here with Godown entity.
+  public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	// we have to do many to one mapping here with Godown entity.
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "godown_id")
     private Godown godown;
@@ -55,13 +64,6 @@ public class InwardItem extends BaseAuditEntity {
     @Column(name = "reciept_no")
     private double recieptNo;
 
-	public Integer getId() {
-		return id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
-	}
 
 	public String getNameOfSupplier() {
 		return nameOfSupplier;

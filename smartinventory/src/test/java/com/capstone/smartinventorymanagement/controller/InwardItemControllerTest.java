@@ -32,7 +32,7 @@ public class InwardItemControllerTest {
     public void getAllInwardItemsTest() {
         // Test case for successful retrieval
         InwardItemDto dto = new InwardItemDto();
-        dto.setId(1234);
+        dto.setId("1234");
         dto.setNameOfSupplier("Abc");
         dto.setItemName("Abcd");
         dto.setInvoiceNumber(12361547);
@@ -53,7 +53,7 @@ public class InwardItemControllerTest {
         // Test case for successful retrieval
         String itemId = "1234";
         InwardItemDto dto = new InwardItemDto();
-        dto.setId(1234);
+        dto.setId("1234");
         dto.setNameOfSupplier("Abc");
         dto.setItemName("Abcd");
         dto.setInvoiceNumber(12361547);
