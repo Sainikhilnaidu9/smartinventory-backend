@@ -23,7 +23,7 @@ jobs:
 
       - name: Build with Maven
         run: |
-          cd smartinventory-backend/smartinventory
+          cd smartinventory
           mvn clean install 
 
       - name: Upload artifact for deployment job
