@@ -30,7 +30,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: smartInventory
-          path: '${{ github.workspace }}/target/*.jar'
+          path: '${{ github.workspace }}/smartinventory/target/*.jar'
 
   deploy:
     runs-on: windows-latest
@@ -44,7 +44,7 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: smartInventory
-          path: '${{ github.workspace }}/target/*.jar'
+          path: '${{ github.workspace }}/smartinventory/target/*.jar'
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
