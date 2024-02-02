@@ -43,7 +43,7 @@ jobs:
       - name: Download artifact from build job
         uses: actions/download-artifact@v3
         with:
-          name: demo-0.0.1-SNAPSHOT
+          name: smartInventory
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
